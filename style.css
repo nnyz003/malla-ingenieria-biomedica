@@ -139,49 +139,4 @@ footer {
   cursor: pointer;
   box-shadow: var(--shadow);
 }
-/* Botón para cambiar el tema */
-#toggle-dark {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  background: var(--morado);
-  color: #fff;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 50%;
-  font-size: 1.1rem;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  z-index: 999;
-}
-
-/* Estilos modo oscuro */
-body.dark {
-  background: #1b1b1d;
-  color: #e0e0e0;
-}
-
-body.dark header h1,
-body.dark .semestre h2 {
-  color: var(--rosa);
-}
-
-body.dark .subtitle {
-  color: #ccc;
-}
-
-body.dark .ramo {
-  background: #444;
-  color: #f1f1f1;
-}
-
-body.dark .ramo.aprobado {
-  background: var(--rosa);
-  color: black;
-}
-
-body.dark .ramo.locked {
-  background: #333;
-  opacity: 0.4;
-}
 
