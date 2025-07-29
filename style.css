@@ -1,0 +1,142 @@
+:root {
+  --rosa-claro: #ffe3f3;
+  --rosa: #f48fb1;
+  --rosa-oscuro: #c2185b;
+  --morado: #ba68c8;
+  --morado-oscuro: #6a1b9a;
+  --text-dark: #2a2a2a;
+  --text-light: #fff;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--rosa-claro);
+  color: var(--text-dark);
+}
+
+header {
+  text-align: center;
+  padding: 32px 16px 16px;
+}
+
+h1 {
+  color: var(--morado-oscuro);
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 16px;
+}
+
+#progress {
+  max-width: 700px;
+  margin: 0 auto 24px;
+  height: 20px;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #eee;
+}
+
+#progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--rosa), var(--morado));
+  width: 0%;
+  transition: width var(--transition);
+  position: absolute;
+  top: 0; left: 0;
+}
+
+#progress-text {
+  position: relative;
+  z-index: 2;
+  color: var(--text-light);
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+main {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.semestre {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow);
+}
+
+.semestre h2 {
+  margin: 0 0 12px;
+  color: var(--morado-oscuro);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.ramo {
+  background: var(--rosa);
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: var(--radius);
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+}
+
+.ramo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.ramo.aprobado {
+  background: var(--morado);
+  color: var(--text-light);
+}
+
+.ramo.locked {
+  background: #f3c9da;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+footer {
+  text-align: center;
+  margin: 32px auto;
+}
+
+#reset {
+  background: var(--morado);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
