@@ -100,43 +100,4 @@ main {
   background: var(--rosa);
   padding: 10px;
   margin-bottom: 8px;
-  border-radius: var(--radius);
-  color: #000;
-  font-weight: 500;
-  cursor: pointer;
-  transition: transform var(--transition), box-shadow var(--transition);
-  position: relative;
-}
-
-.ramo:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.ramo.aprobado {
-  background: var(--morado);
-  color: var(--text-light);
-}
-
-.ramo.locked {
-  background: #f3c9da;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-footer {
-  text-align: center;
-  margin: 32px auto;
-}
-
-#reset {
-  background: var(--morado);
-  color: #fff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-}
-
+  border-radius
