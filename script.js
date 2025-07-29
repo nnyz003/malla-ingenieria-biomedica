@@ -102,3 +102,16 @@ const malla = [
     ],
   },
 ];
+// Activar modo oscuro/claro
+const toggleBtn = document.getElementById("toggle-dark");
+const isDark = localStorage.getItem("modoOscuro") === "true";
+
+if (isDark) {
+  document.body.classList.add("dark");
+}
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const darkActive = document.body.classList.contains("dark");
+  localStorage.setItem("modoOscuro", darkActive);
+});
